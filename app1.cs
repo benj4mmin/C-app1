@@ -35,15 +35,7 @@ namespace NumberGuessingGame
                 string input = Console.ReadLine();
                 if (!int.TryParse(input, out guess))
                 {
-                    //Change text color
-                    Console.ForegroundColor = ConsoleColor.Red;
-
-                    //tell user this isnt a valid response
-                    Console.WriteLine("Invalid response, try again with a number between 1 and 100!");
-
-                    //Reset text color
-                    Console.ResetColor();
-                    //print response with function
+                    //print validity response with function
                     PrintColorMessage(ConsoleColor.DarkRed, "Invalid response, try again with a number between 1 and 100!");
                 }
 
@@ -59,26 +51,9 @@ namespace NumberGuessingGame
                     //match guess
                     if (NumberGuessingGame != correctNumber)
                     {
-                        //Change text color
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        //wrong number disclaimer
-                        Console.WriteLine("Wrong number, try again!");
-
-                        //Reset text color
-                        Console.ResetColor();
                         //print failure response with function
                         PrintColorMessage(ConsoleColor.Red, "Wrong number, try again!");
                     }
-                    //Change text color
-                    Console.ForegroundColor = ConsoleColor.Blue;
-
-                    //game winning message
-                    Console.WriteLine("You are correct!");
-
-                    //Reset text color
-                    Console.ResetColor();
-
                     //print winner response with function
                     PrintColorMessage(ConsoleColor.Blue, "You are correct!");
 
